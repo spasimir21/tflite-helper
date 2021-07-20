@@ -1,4 +1,4 @@
-# TFLite-Helper v0.9.3
+# TFLite-Helper v0.9.4
 
 A Simple Library That Helps You Run TFLite Models in the Browser.
 

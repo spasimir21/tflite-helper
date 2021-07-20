@@ -1,6 +1,6 @@
 {
   "name": "tflite-helper",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A Simple Library That Helps You Run TFLite Models in the Browser.",
   "main": "dist/index.js",
   "scripts": {
