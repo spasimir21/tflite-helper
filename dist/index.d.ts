@@ -1,0 +1,41 @@
+declare type TFLiteHelperModule = {
+    _allocateModel(model_buffer_size: number): number;
+    _getModelBufferOffset(model_offset: number): number;
+    _loadModel(model_offset: number): number;
+    _getInputTensorCount(model_offset: number): number;
+    _getInputTensorId(model_offset: number, index: number): number;
+    _getOutputTensorCount(model_offset: number): number;
+    _getOutputTensorId(model_offset: number, index: number): number;
+    _getTensorType(model_offset: number, tensor_id: number): number;
+    _getTensorOffset(model_offset: number, tensor_id: number): number;
+    _getTensorDimensionCount(model_offset: number, tensor_id: number): number;
+    _getTensorDimension(model_offset: number, tensor_id: number, index: number): number;
+    _invokeModel(model_offset: number): number;
+    _freeModel(model_offset: number): void;
+    HEAP8: Int8Array;
+    HEAP16: Int16Array;
+    HEAP32: Int32Array;
+    HEAPU8: Uint8Array;
+    HEAPU16: Uint16Array;
+    HEAPU32: Uint32Array;
+    HEAPF32: Float32Array;
+    HEAPF64: Float64Array;
+};
+declare type Tensor = {
+    id: number;
+    type: number;
+    offset: number;
+    size: number;
+    dimensions: number[];
+    data: Float64Array | Float32Array | Int32Array | Int16Array | Int8Array | Uint32Array | Uint8Array;
+};
+declare type TFLiteModel = {
+    inputs: Tensor[];
+    outputs: Tensor[];
+    invoke(): number;
+    free(): void;
+    _module: TFLiteHelperModule;
+};
+declare function createModel(model_path: string, module_path: string): Promise<TFLiteModel>;
+export { createModel, TFLiteModel };
+export default createModel;

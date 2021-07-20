@@ -1,0 +1,29 @@
+{
+  "name": "tflite-helper",
+  "version": "0.9.0",
+  "description": "A Simple Library That Helps You Run TFLite Models in the Browser.",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "keywords": [
+    "tflite",
+    "tensorflow",
+    "lite",
+    "helper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spasimir21/tflite-helper.git"
+  },
+  "homepage": "https://github.com/spasimir21/tflite-helper#readme",
+  "bugs": {
+    "url": "https://github.com/spasimir21/tflite-helper/issues"
+  },
+  "author": "Spasimir Pavlov",
+  "license": "MIT"
+}
