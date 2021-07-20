@@ -2,7 +2,7 @@
 
 A Simple Library That Helps You Run TFLite Models in the Browser.
 
-_Base code was taken from https://github.com/Volcomix/virtual-background_
+_Base code taken from https://github.com/Volcomix/virtual-background_
 
 # Installation
 
@@ -12,13 +12,13 @@ $ npm install tflite-helper
 
 # Preparation
 
-To use this library you'll need to staticlly host all the files from the **wasm/dist** folder in the same path.  
+To use this library you'll need to host all the files from the **wasm/dist** folder in the same path on your server.  
 ex. /tflite-helper  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper.js  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper.wasm  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper-simd.js  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper-simd.wasm  
-You'll also need to statically host your model's **.tflite** file.
+You'll also need to host your model's **.tflite** file.
 
 # Usage
 
