@@ -53,10 +53,10 @@ const $emscipten_modules: { [key: string]: TFLiteHelperModule } = {};
 
 async function loadModule(path: string): Promise<TFLiteHelperModule> {
   try {
-    const createTFLiteHelperSIMDModule = (await import(`${path}/tflite-helper-simd.js`)).default;
+    const createTFLiteHelperSIMDModule = (await eval(`import('${path}/tflite-helper-simd.js'`)).default;
     return await createTFLiteHelperSIMDModule();
   } catch (err) {
-    const createTFLiteHelperModule = (await import(`${path}/tflite-helper.js`)).default;
+    const createTFLiteHelperModule = (await eval(`import('${path}/tflite-helper.js'`)).default;
     return await createTFLiteHelperModule();
   }
 }
