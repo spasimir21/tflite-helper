@@ -14,10 +14,10 @@ $ npm install tflite-helper
 
 To use this library you'll need to staticlly host all the files from the **wasm/dist** folder in the same path.  
 ex. /tflite-helper  
-$~~~~~$\> tflite-helper.js  
-$~~~~~$\> tflite-helper.wasm  
-$~~~~~$\> tflite-helper-simd.js  
-$~~~~~$\> tflite-helper-simd.wasm  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper.js  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper.wasm  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper-simd.js  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\> tflite-helper-simd.wasm  
 You'll also need to statically host your model's **.tflite** file.
 
 # Usage
